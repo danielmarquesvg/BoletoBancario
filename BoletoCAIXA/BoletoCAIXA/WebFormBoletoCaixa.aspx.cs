@@ -10,19 +10,22 @@ namespace BoletoCAIXA
 {
     public partial class WebFormBoleto : System.Web.UI.Page
     {
+
+        string html;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             BoletoBancario boletoBancario = new BoletoBancario();
             boletoBancario.CodigoBanco = (short)104;
 
-            DateTime dataDeVencimento = new DateTime(2015, 09, 30);
-            DateTime dataDoDocumeto = new DateTime(2015, 09, 21);
-            DateTime DataDoProcessamento = new DateTime(2015, 09, 21);
+            DateTime dataDeVencimento = new DateTime(2015, 09, 23);
+            DateTime dataDoDocumeto = new DateTime(2015, 09, 23);
+            DateTime DataDoProcessamento = new DateTime(2015, 09, 23);
 
-            Cedente c = new Cedente("11.111.111/0001-10", "Nome do Cedente", "1111", "1111", "4");
+            Cedente c = new Cedente("11.111.111/0001-10", "Nome do Cedente", "1423", "1330", "4");
 
-            c.Codigo = "123456";
+            c.Codigo = "420147";
 
 
             Boleto boleto = new Boleto(dataDeVencimento, 5.00m, "SR", "24000000000000001", c);
@@ -56,10 +59,21 @@ namespace BoletoCAIXA
 
             boletoBancario.Boleto = boleto; 
             boletoBancario.MostrarComprovanteEntrega = true;
-            boletoBancario.FormatoCarne = true;
+            boletoBancario.FormatoCarne = false;
 
             boletoBancario.Boleto.Valida();
+
+            html += boletoBancario.MontaHtml();
+            
+
             Panel1.Controls.Add(boletoBancario);
+
+            string linhaDigitavel = "linha digitavel = "+boleto.CodigoBarra.LinhaDigitavel.ToString();
+            LabelLinhaDigitavel.Text = linhaDigitavel;
+
+            string codigo = "Codigo de barra = "+boleto.CodigoBarra.Codigo.ToString();
+            LabelCodigo.Text = codigo;
+
             //Literal1.Text = htmlBoleto;
             
             /*

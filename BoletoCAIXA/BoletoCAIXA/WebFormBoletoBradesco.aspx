@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebFormBoleto.aspx.cs" Inherits="BoletoCAIXA.WebFormBoleto" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebFormBoletoBradesco.aspx.cs" Inherits="BoletoCAIXA.WebFormBoletoBradesco" %>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,9 @@
     <div class="container">
 
         <asp:Panel ID="Panel1" runat="server"></asp:Panel>
-        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+        <asp:Label ID="LabelLinhaDigitavel" runat="server"></asp:Label>
+        <br>
+        <asp:Label ID="LabelCodigo" runat="server"></asp:Label>
     </div>
 </body>
 </html>

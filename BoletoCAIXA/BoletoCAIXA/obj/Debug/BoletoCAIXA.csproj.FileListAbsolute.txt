@@ -40,3 +40,10 @@ C:\Users\DanielMarques\Desktop\Boletos\BoletoWeb Versao 17082015\BoletoWeb-maste
 C:\Users\DanielMarques\Desktop\Boletos\BoletoWeb Versao 17082015\BoletoWeb-master\BoletoCAIXA\BoletoCAIXA\obj\Debug\BoletoCAIXA.csprojResolveAssemblyReference.cache
 C:\Users\DanielMarques\Desktop\Boletos\BoletoWeb Versao 17082015\BoletoWeb-master\BoletoCAIXA\BoletoCAIXA\obj\Debug\BoletoCAIXA.dll
 C:\Users\DanielMarques\Desktop\Boletos\BoletoWeb Versao 17082015\BoletoWeb-master\BoletoCAIXA\BoletoCAIXA\obj\Debug\BoletoCAIXA.pdb
+D:\Workspace\Github\BoletoBancario\BoletoCAIXA\BoletoCAIXA\bin\BoletoCAIXA.dll.config
+D:\Workspace\Github\BoletoBancario\BoletoCAIXA\BoletoCAIXA\bin\BoletoCAIXA.dll
+D:\Workspace\Github\BoletoBancario\BoletoCAIXA\BoletoCAIXA\bin\BoletoCAIXA.pdb
+D:\Workspace\Github\BoletoBancario\BoletoCAIXA\BoletoCAIXA\bin\Boleto.Net.dll
+D:\Workspace\Github\BoletoBancario\BoletoCAIXA\BoletoCAIXA\obj\Debug\BoletoCAIXA.csprojResolveAssemblyReference.cache
+D:\Workspace\Github\BoletoBancario\BoletoCAIXA\BoletoCAIXA\obj\Debug\BoletoCAIXA.dll
+D:\Workspace\Github\BoletoBancario\BoletoCAIXA\BoletoCAIXA\obj\Debug\BoletoCAIXA.pdb

@@ -10,7 +10,7 @@
 namespace BoletoCAIXA {
     
     
-    public partial class WebFormBoleto {
+    public partial class WebFormBoletoSicoob {
         
         /// <summary>
         /// Panel1 control.
@@ -22,12 +22,21 @@ namespace BoletoCAIXA {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// Literal1 control.
+        /// LabelLinhaDigitavel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal1;
+        protected global::System.Web.UI.WebControls.Label LabelLinhaDigitavel;
+        
+        /// <summary>
+        /// LabelCodigo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelCodigo;
     }
 }

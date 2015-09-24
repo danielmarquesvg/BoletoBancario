@@ -70,17 +70,41 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
     <Content Include="Web.config" />
-    <Content Include="WebFormBoleto.aspx" />
+    <Content Include="WebFormBoletoBradesco.aspx" />
+    <Content Include="WebFormBoletoCaixa.aspx" />
+    <Content Include="WebFormBoletoSantander.aspx" />
+    <Content Include="WebFormBoletoSicoob.aspx" />
     <Content Include="WebFormDados.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebFormBoleto.aspx.cs">
-      <DependentUpon>WebFormBoleto.aspx</DependentUpon>
+    <Compile Include="WebFormBoletoBradesco.aspx.cs">
+      <DependentUpon>WebFormBoletoBradesco.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormBoleto.aspx.designer.cs">
-      <DependentUpon>WebFormBoleto.aspx</DependentUpon>
+    <Compile Include="WebFormBoletoBradesco.aspx.designer.cs">
+      <DependentUpon>WebFormBoletoBradesco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormBoletoCaixa.aspx.cs">
+      <DependentUpon>WebFormBoletoCaixa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormBoletoCaixa.aspx.designer.cs">
+      <DependentUpon>WebFormBoletoCaixa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormBoletoSantander.aspx.cs">
+      <DependentUpon>WebFormBoletoSantander.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormBoletoSantander.aspx.designer.cs">
+      <DependentUpon>WebFormBoletoSantander.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormBoletoSicoob.aspx.cs">
+      <DependentUpon>WebFormBoletoSicoob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormBoletoSicoob.aspx.designer.cs">
+      <DependentUpon>WebFormBoletoSicoob.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormDados.aspx.cs">
       <DependentUpon>WebFormDados.aspx</DependentUpon>
