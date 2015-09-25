@@ -89,6 +89,7 @@ namespace BoletoCAIXA
 
             Panel1.Controls.Add(boletoBancario);
 
+            /*
             string linhaDigitavel = "linha digitavel = " + boleto.CodigoBarra.LinhaDigitavel.ToString();
             LabelLinhaDigitavel.Text = linhaDigitavel;
 
@@ -96,7 +97,7 @@ namespace BoletoCAIXA
             LabelCodigo.Text = codigo;
 
             //boletoBancario.MostrarComprovanteEntrega = (Request.Url.Query == "?show");
-
+            */
         }
     }
 }

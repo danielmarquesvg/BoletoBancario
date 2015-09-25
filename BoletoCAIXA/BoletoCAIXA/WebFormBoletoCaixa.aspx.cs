@@ -11,7 +11,7 @@ namespace BoletoCAIXA
     public partial class WebFormBoleto : System.Web.UI.Page
     {
 
-        string html;
+        //string html;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -63,11 +63,11 @@ namespace BoletoCAIXA
 
             boletoBancario.Boleto.Valida();
 
-            html += boletoBancario.MontaHtml();
+            //html += boletoBancario.MontaHtml();
             
 
             Panel1.Controls.Add(boletoBancario);
-
+            /*
             string linhaDigitavel = "linha digitavel = "+boleto.CodigoBarra.LinhaDigitavel.ToString();
             LabelLinhaDigitavel.Text = linhaDigitavel;
 
@@ -76,7 +76,7 @@ namespace BoletoCAIXA
 
             //Literal1.Text = htmlBoleto;
             
-            /*
+            
             //Requisições do Formulário
 
             string sacadoNome = Request.Form["sacadoNome"];

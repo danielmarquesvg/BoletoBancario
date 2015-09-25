@@ -23,14 +23,11 @@ namespace BoletoCAIXA
             BoletoBancario boletoBancario = new BoletoBancario();
             boletoBancario.CodigoBanco = (short)237;
 
-            Instrucao_Bradesco item = new Instrucao_Bradesco(9, 5);
-
-            Cedente cedente = new Cedente("00.000.000/0000-00", "Empresa Teste", "0413", "8", "0002916", "5"); ;
+            Cedente cedente = new Cedente("00.000.000/0000-00", "Empresa Teste", "2413", "1232916"); ;
             cedente.Codigo = "13000";
 
-
             //Carteiras 
-            Boleto boleto = new Boleto(dataDeVencimento, 123, "02", "00970171092", cedente);
+            Boleto boleto = new Boleto(dataDeVencimento, 5.01m, "06", "12970171092", cedente);
             boleto.NumeroDocumento = "970171092";
             boleto.DataDocumento = dataDoDocumeto;
             boleto.DataProcessamento = DataDoProcessamento;
@@ -42,6 +39,7 @@ namespace BoletoCAIXA
             boleto.Sacado.Endereco.CEP = "00000000";
             boleto.Sacado.Endereco.UF = "UF";
 
+            Instrucao_Bradesco item = new Instrucao_Bradesco(9, 5);
             item.Descricao += " após " + item.QuantidadeDias.ToString() + " dias corridos do vencimento.";
             boleto.Instrucoes.Add(item); //"Não Receber após o vencimento");
 
@@ -57,18 +55,20 @@ namespace BoletoCAIXA
             boletoBancario.MostrarContraApresentacaoNaDataVencimento = true;
 
             boletoBancario.Boleto = boleto;
-            boletoBancario.MostrarCodigoCarteira = true;
+            boletoBancario.MostrarContraApresentacaoNaDataVencimento = false;
+            boletoBancario.MostrarCodigoCarteira = false;
             boletoBancario.MostrarComprovanteEntrega = true;
             boletoBancario.Boleto.Valida();
 
             Panel1.Controls.Add(boletoBancario);
 
+            /*
             string linhaDigitavel = "linha digitavel = " + boleto.CodigoBarra.LinhaDigitavel.ToString();
             LabelLinhaDigitavel.Text = linhaDigitavel;
 
             string codigo = "Codigo de barra = " + boleto.CodigoBarra.Codigo.ToString();
             LabelCodigo.Text = codigo;
-
+            */
         }
     }
 }
