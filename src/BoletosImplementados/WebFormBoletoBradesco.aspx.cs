@@ -58,6 +58,10 @@ namespace BoletoCAIXA
             boletoBancario.MostrarContraApresentacaoNaDataVencimento = false;
             boletoBancario.MostrarCodigoCarteira = false;
             boletoBancario.MostrarComprovanteEntrega = true;
+
+            
+
+            boletoBancario.FormatoCarne = true;
             boletoBancario.Boleto.Valida();
 
             Panel1.Controls.Add(boletoBancario);

@@ -151,11 +151,11 @@ img {
 }
 
 .h13 {
-	height: 13px;
+	height: 3px;
 }
 
 .h12 {
-	height: 12px;
+	height: 2px;
 }
 
 .h13 td {
@@ -359,7 +359,7 @@ img {
 
 .ebc {
 	width: 4px;
-	height: 440px;
-	border-right: dotted 1px #000000;
+	height: 393px;
+	border-right: dotted 2px #000000;
 	margin-right: 4px;
 }

@@ -257,8 +257,8 @@ namespace BoletoNet
 				html.Append("<br />");
 
 				return html.ToString()
-					.Replace("@TITULO", titulo)
-					.Replace("@INSTRUCAO", instrucoes);
+					.Replace("@TITULO", "")
+					.Replace("@INSTRUCAO", "");
 			}
 			catch (Exception ex)
 			{
