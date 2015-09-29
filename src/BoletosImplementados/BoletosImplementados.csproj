@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -86,6 +87,7 @@
     <Content Include="WebFormBoletoCaixa.aspx" />
     <Content Include="WebFormBoletoSantander.aspx" />
     <Content Include="WebFormBoletoSicoob.aspx" />
+    <Content Include="WebFormCarnet.aspx" />
     <Content Include="WebFormDados.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +119,13 @@
     </Compile>
     <Compile Include="WebFormBoletoSicoob.aspx.designer.cs">
       <DependentUpon>WebFormBoletoSicoob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormCarnet.aspx.cs">
+      <DependentUpon>WebFormCarnet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormCarnet.aspx.designer.cs">
+      <DependentUpon>WebFormCarnet.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormDados.aspx.cs">
       <DependentUpon>WebFormDados.aspx</DependentUpon>
