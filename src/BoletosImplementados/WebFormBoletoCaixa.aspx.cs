@@ -20,26 +20,27 @@ namespace BoletoCAIXA
             BoletoBancario boletoBancario = new BoletoBancario();
             boletoBancario.CodigoBanco = (short)104;
 
-            DateTime dataDeVencimento = new DateTime(2015, 09, 23);
-            DateTime dataDoDocumeto = new DateTime(2015, 09, 23);
-            DateTime DataDoProcessamento = new DateTime(2015, 09, 23);
+            DateTime dataDeVencimento = new DateTime(2015, 09, 30);
+            DateTime dataDoDocumeto = new DateTime(2015, 09, 29);
+            DateTime DataDoProcessamento = new DateTime(2015, 09, 29);
 
-            Cedente c = new Cedente("11.111.111/0001-10", "Nome do Cedente", "1423", "1330", "4");
+            Cedente c = new Cedente("17.405.814/0001-09", "Instituto Suporte Educacional Treinamento Especializado", "0773", "997", "9");
 
-            c.Codigo = "420147";
+            c.Codigo = "377306";
 
 
-            Boleto boleto = new Boleto(dataDeVencimento, 5.00m, "SR", "24000000000000001", c);
+            Boleto boleto = new Boleto(dataDeVencimento, 5.01m, "SR", "24000000000000002", c);
             boleto.DataDocumento = dataDoDocumeto;
             boleto.DataProcessamento = DataDoProcessamento;
 
-            boleto.Sacado = new Sacado("111.111.111-11", "Nome do Sacado");
-            boleto.Sacado.Endereco.End = "Rua, número, complemento do sacado";
-            boleto.Sacado.Endereco.Bairro = "Bairro do sacado";
-            boleto.Sacado.Endereco.Cidade = "Cidade do Sacado";
+            boleto.Sacado = new Sacado("111.111.111-11", "José");
+            boleto.Sacado.Endereco.End = "Rua Floriano Peixoto, S/N";
+            boleto.Sacado.Endereco.Bairro = "Centro";
+            boleto.Sacado.Endereco.Cidade = "Campina Grande";
             boleto.Sacado.Endereco.CEP = "58100-000";
-            boleto.Sacado.Endereco.UF = "SP";
+            boleto.Sacado.Endereco.UF = "PB";
 
+            /*
             //Adiciona as instruções ao boleto
             #region Instruções
             Instrucao_Caixa item;
@@ -51,10 +52,11 @@ namespace BoletoCAIXA
             item = new Instrucao_Caixa((int)EnumInstrucoes_Caixa.NaoReceberAposNDias, 90);
             boleto.Instrucoes.Add(item);
             #endregion Instruções
+            */
 
             EspecieDocumento_Caixa espDocCaixa = new EspecieDocumento_Caixa();
             boleto.EspecieDocumento = new EspecieDocumento_Caixa(espDocCaixa.getCodigoEspecieByEnum(EnumEspecieDocumento_Caixa.DuplicataMercantil));
-            boleto.NumeroDocumento = "0000001";
+            boleto.NumeroDocumento = "0000002";
             boleto.DataProcessamento = DateTime.Now;
             boleto.DataDocumento = DateTime.Now;
 

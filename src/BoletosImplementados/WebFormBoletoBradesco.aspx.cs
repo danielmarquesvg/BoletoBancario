@@ -61,7 +61,7 @@ namespace BoletoCAIXA
 
             
 
-            boletoBancario.FormatoCarne = true;
+            boletoBancario.FormatoCarne = false;
             boletoBancario.Boleto.Valida();
 
             Panel1.Controls.Add(boletoBancario);

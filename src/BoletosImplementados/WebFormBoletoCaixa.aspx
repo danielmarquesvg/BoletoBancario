@@ -3,13 +3,10 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-     <link href="css/bootstrap.css" rel="stylesheet" />
     <title></title>
 </head>
-
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 
 <body>
 
@@ -19,6 +16,8 @@
         <asp:Label ID="LabelLinhaDigitavel" runat="server"></asp:Label>
         <br>
         <asp:Label ID="LabelCodigo" runat="server"></asp:Label>
+
     </div>
+
 </body>
 </html>
