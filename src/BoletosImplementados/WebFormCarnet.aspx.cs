@@ -54,8 +54,10 @@ namespace BoletoCAIXA
 
             int numeroDeParcelas = 2;
             String numeroDeParcelasString = Convert.ToString(numeroDeParcelas);
-            
-            //Cria boleto
+
+            //###################################################
+            //################ - Cria boleto 1 - ################
+            //###################################################
             BoletoBancario boletoBancario = new BoletoBancario();
             boletoBancario.CodigoBanco = codigoDoBanco;
             
@@ -87,17 +89,79 @@ namespace BoletoCAIXA
             
             boletoBancario.Boleto.Valida();
 
-            for (int i=0; i<6; i++)
-            {
-                listaAuxiliar.Add(boletoBancario);
-                
-            }
+            //###################################################
+            //################ - Cria boleto 2 - ################
+            //###################################################
+            BoletoBancario boletoBancario2 = new BoletoBancario();
+            boletoBancario2.CodigoBanco = codigoDoBanco;
 
-            for(int i=0; i < listaAuxiliar.Count; i++)
+            //Cria cedente
+            Boleto boleto2 = new Boleto(dataDeVencimento, valorDoCarne, carteira, nossoNumero, c);
+            boleto2.DataDocumento = dataDoDocumeto;
+            boleto2.DataProcessamento = dataDoProcessamento;
+
+            boleto2.Sacado = new Sacado(cpfDoSacado, nomeDoSacado);
+            boleto2.Sacado.Endereco.End = ruaDoSacado;
+            boleto2.Sacado.Endereco.Bairro = bairroDoSacado;
+            boleto2.Sacado.Endereco.Cidade = cidadeDoSacado;
+            boleto2.Sacado.Endereco.CEP = cepDoSacado;
+            boleto2.Sacado.Endereco.UF = estadoDoSacado;
+
+            boleto2.EspecieDocumento = new EspecieDocumento_Caixa(espDocCaixa.getCodigoEspecieByEnum(EnumEspecieDocumento_Caixa.DuplicataMercantil));
+
+            boleto2.NumeroDocumento = numeroDocumento;
+            boleto2.DataProcessamento = dataDoProcessamento;
+            boleto2.DataDocumento = dataDoDocumeto;
+
+            boletoBancario2.Boleto = boleto2;
+            boletoBancario2.MostrarComprovanteEntrega = true;
+            boletoBancario2.FormatoCarne = true;
+
+            boletoBancario2.Boleto.Valida();
+
+            //###################################################
+            //################ - Cria boleto 3 - ################
+            //###################################################
+            BoletoBancario boletoBancario3 = new BoletoBancario();
+            boletoBancario3.CodigoBanco = codigoDoBanco;
+
+            //Cria cedente
+            Boleto boleto3 = new Boleto(dataDeVencimento, valorDoCarne, carteira, nossoNumero, c);
+            boleto3.DataDocumento = dataDoDocumeto;
+            boleto3.DataProcessamento = dataDoProcessamento;
+
+            boleto3.Sacado = new Sacado(cpfDoSacado, nomeDoSacado);
+            boleto3.Sacado.Endereco.End = ruaDoSacado;
+            boleto3.Sacado.Endereco.Bairro = bairroDoSacado;
+            boleto3.Sacado.Endereco.Cidade = cidadeDoSacado;
+            boleto3.Sacado.Endereco.CEP = cepDoSacado;
+            boleto3.Sacado.Endereco.UF = estadoDoSacado;
+
+            boleto3.EspecieDocumento = new EspecieDocumento_Caixa(espDocCaixa.getCodigoEspecieByEnum(EnumEspecieDocumento_Caixa.DuplicataMercantil));
+
+            boleto3.NumeroDocumento = numeroDocumento;
+            boleto3.DataProcessamento = dataDoProcessamento;
+            boleto3.DataDocumento = dataDoDocumeto;
+
+            boletoBancario3.Boleto = boleto3;
+            boletoBancario3.MostrarComprovanteEntrega = true;
+            boletoBancario3.FormatoCarne = true;
+
+            boletoBancario3.Boleto.Valida();
+
+            //###################################################
+            //###### - Adiciona Boletos na ListaAuxiliar - ######
+            //###################################################
+            listaAuxiliar.Add(boletoBancario);
+            listaAuxiliar.Add(boletoBancario2);
+            listaAuxiliar.Add(boletoBancario3);
+
+            for (int i=0; i < listaAuxiliar.Count; i++)
             {
                 Panel1.Controls.Add(listaAuxiliar[i]);
+                
             }
-
+            
             Label1.Text = listaAuxiliar.Count.ToString();
             
 
