@@ -62,7 +62,7 @@ namespace BoletoCAIXA
 
             boletoBancario.Boleto = boleto; 
             boletoBancario.MostrarComprovanteEntrega = true;
-            boletoBancario.FormatoCarne = true;
+            boletoBancario.FormatoCarne = false;
 
             boletoBancario.Boleto.Valida();
 

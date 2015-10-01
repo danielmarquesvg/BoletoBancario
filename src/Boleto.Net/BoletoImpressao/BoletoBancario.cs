@@ -13,8 +13,8 @@ using System.Reflection;
 using System.Drawing.Imaging;
 using System.Web;
 
-
 [assembly: WebResource("BoletoNet.BoletoImpressao.BoletoNet.css", "text/css", PerformSubstitution = true)]
+[assembly: WebResource("BoletoNet.BoletoImpressao.CarneNet.css", "text/css", PerformSubstitution = true)]
 [assembly: WebResource("BoletoNet.Imagens.barra.gif", "image/gif")]
 //[assembly: WebResource("BoletoNet.Imagens.corte.gif", "image/gif")]
 //[assembly: WebResource("BoletoNet.Imagens.barrainterna.gif", "image/gif")]
@@ -208,14 +208,31 @@ namespace BoletoNet
 		#region Override
 		protected override void OnPreRender(EventArgs e)
 		{
-			string alias = "BoletoNet.BoletoImpressao.BoletoNet.css";
-			string csslink = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" +
-				Page.ClientScript.GetWebResourceUrl(typeof(BoletoBancario), alias) + "\" />";
 
-			var include = new LiteralControl(csslink);
-			Page.Header.Controls.Add(include);
+            if (_formatoCarne == true)
+            {
+                string alias = "BoletoNet.BoletoImpressao.CarneNet.css";
+                string csslink = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" +
+                    Page.ClientScript.GetWebResourceUrl(typeof(BoletoBancario), alias) + "\" />";
 
-			base.OnPreRender(e);
+                var include = new LiteralControl(csslink);
+                Page.Header.Controls.Add(include);
+
+                base.OnPreRender(e);
+            }
+            else
+            {
+                string alias = "BoletoNet.BoletoImpressao.BoletoNet.css";
+                string csslink = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" +
+                    Page.ClientScript.GetWebResourceUrl(typeof(BoletoBancario), alias) + "\" />";
+
+                var include = new LiteralControl(csslink);
+                Page.Header.Controls.Add(include);
+
+                base.OnPreRender(e);
+            }
+            
+            
 		}
 
 		protected override void OnLoad(EventArgs e)
@@ -752,6 +769,7 @@ namespace BoletoNet
 
 			#region Css
 			{
+
                 string arquivoCSS = usaCSSPDF ? "BoletoNet.BoletoImpressao.BoletoNetPDF.css" : "BoletoNet.BoletoImpressao.BoletoNet.css";
 				Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(arquivoCSS);
 
