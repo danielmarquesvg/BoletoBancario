@@ -51,8 +51,8 @@ img {
 
 .cut {
 	width: 665px;
-	height: 0px;
-	border-top: dashed 0px #000;
+	height: 1px;
+	border-top: dashed 1px #000;
 }
 
 .Ac {
@@ -86,7 +86,7 @@ img {
 }
 
 .ctN {
-	font: 0px "arial narrow";
+	font: 9px "arial narrow";
 	color: #000033;
 }
 
@@ -103,12 +103,12 @@ img {
 }
 
 .imgLogo {
-	width: 80px;
+	width: 150px;
 }
 
 	.imgLogo img {
-		width: 75px;
-		height: 20px;
+		width: 150px;
+		height: 40px;
 	}
 
 .barra {
@@ -151,7 +151,7 @@ img {
 }
 
 .h13 {
-	height: 0px;
+	height: 3px;
 }
 
 .h12 {
@@ -359,10 +359,9 @@ img {
 
 .ebc {
 	width: 4px;
-	height: 330px;
+	height: 393px;
 	border-right: dotted 2px #000000;
 	margin-right: 4px;
 }
 
-/*  Isaac Victor */
 #Panel1  br {display:none !important;}

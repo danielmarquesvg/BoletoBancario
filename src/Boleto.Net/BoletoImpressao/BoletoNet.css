@@ -103,7 +103,7 @@ img {
 }
 
 .imgLogo {
-	width: 80px;
+	width:75px;
 }
 
 	.imgLogo img {
@@ -363,3 +363,5 @@ img {
 	border-right: dotted 2px #000000;
 	margin-right: 4px;
 }
+
+#Panel1  br {display:none !important;}

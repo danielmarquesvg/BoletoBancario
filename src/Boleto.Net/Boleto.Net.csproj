@@ -178,11 +178,6 @@
     <Compile Include="Enums\TipoComplementoLancamento.cs" />
     <Compile Include="Enums\TipoLancamento.cs" />
     <Compile Include="Enums\TipoPessoa.cs" />
-    <Compile Include="Html.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Html.resx</DependentUpon>
-    </Compile>
     <Compile Include="Util\BarCodeBase.cs" />
     <Compile Include="BoletoImpressao\BoletoBancario.cs" />
     <Compile Include="Banco\Banco_Bradesco.cs" />
@@ -192,6 +187,11 @@
     <Compile Include="Boleto\ContaBancaria.cs" />
     <Compile Include="Util\DateInterval.cs" />
     <Compile Include="Boleto\Endereco.cs" />
+    <Compile Include="Html.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Html.resx</DependentUpon>
+    </Compile>
     <Compile Include="Banco\IBanco.cs" />
     <Compile Include="Boleto\Instrucao\Instrucao_Bradesco.cs" />
     <Compile Include="Boleto\Instrucao\IInstrucao.cs" />
@@ -215,6 +215,9 @@
     <Compile Include="Util\Extensions.cs" />
     <Compile Include="Util\LeitorLinhaPosicao.cs" />
     <Compile Include="Util\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BoletoImpressao\BoletoNet.css" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Imagens\corte.gif" />
@@ -297,7 +300,7 @@
     <EmbeddedResource Include="BoletoImpressao\BoletoNetPDF.css" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BoletoImpressao\CarneNet.css" />
+    <EmbeddedResource Include="BoletoImpressao\Carne.css" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
