@@ -19,8 +19,8 @@ namespace BoletoCAIXA
             if (flagCarne == false)
             {
                 /*
-           *  Datas do boleto
-           */
+                *  Datas do boleto
+                */
                 DateTime dataDeVencimento = new DateTime(2015, 09, 30);
                 DateTime dataDoDocumeto = new DateTime(2015, 09, 24);
                 DateTime DataDoProcessamento = new DateTime(2015, 09, 24);
@@ -73,16 +73,13 @@ namespace BoletoCAIXA
             {
 
                 BoletoBancario[] arrayDeBoletos = new BoletoBancario[quantidadeDeParcelas];
+                DateTime dataDeVencimento = new DateTime(2015, 09, 30);
 
                 for (int j = 0; j < arrayDeBoletos.Length; j++)
                 {
                     /*
                  *  Datas do boleto
                  */
-
-
-                    DateTime dataDeVencimento = new DateTime(2015, 09, 30);
-
 
                     DateTime dataDoDocumeto = new DateTime(2015, 09, 24);
                     DateTime DataDoProcessamento = new DateTime(2015, 09, 24);
@@ -130,6 +127,8 @@ namespace BoletoCAIXA
                     boletoBancario.Boleto.Valida();
 
                     arrayDeBoletos[j] = boletoBancario;
+
+                    dataDeVencimento = dataDeVencimento.AddMonths(1);
 
                 }
 
