@@ -28,7 +28,7 @@ namespace BoletoCAIXA
                 BoletoBancario boletoBancario = new BoletoBancario();
                 boletoBancario.CodigoBanco = (short)237;
 
-                Cedente cedente = new Cedente("00.000.000/0000-00", "Empresa Teste", "2413", "1232916"); ;
+                Cedente cedente = new Cedente("00.000.000/0000-00", "Empresa Teste", "2413", "1232916");
                 cedente.Codigo = "13000";
 
                 //Carteiras 
